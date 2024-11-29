@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Summarization with RAG</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>News Summarization with RAG</h1>
+        <form method="post" action="/summarize-news">
+            <textarea name="keywords" placeholder="Enter your search keywords, separated by commas..." class="input-box" required></textarea>
+            <div class="button-container">
+                <button type="submit" class="button">Summarize News</button>
+            </div>
+        </form>
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+        {% if results %}
+            <hr>
+            <div class="summaries">
+                {% for result in results %}
+                    <p class="info">Your prompt "{{ result.prompt }}" is categorized under: <strong>{{ result.category }}</strong></p>
+                    {% if result.summaries %}
+                        {% for summary in result.summaries %}
+                            <p class="summary">{{ summary }}</p>
+                        {% endfor %}
+                    {% else %}
+                        <p>No related news found.</p>
+                    {% endif %}
+                    <hr>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
+    
