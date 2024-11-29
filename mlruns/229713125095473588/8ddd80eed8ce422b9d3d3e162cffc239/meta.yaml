@@ -1,0 +1,15 @@
+artifact_uri: file:///d:/College/DEPI/Final%20Project%20RAG/News-Summerizer%20FastAPI%20%26%20Streamlit/Final_Rag_NS_WithLinks/mlruns/229713125095473588/8ddd80eed8ce422b9d3d3e162cffc239/artifacts
+end_time: 1729380411606
+entry_point_name: ''
+experiment_id: '229713125095473588'
+lifecycle_stage: active
+run_id: 8ddd80eed8ce422b9d3d3e162cffc239
+run_name: Model_Evaluation
+run_uuid: 8ddd80eed8ce422b9d3d3e162cffc239
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1729380411560
+status: 4
+tags: []
+user_id: Abdelrahman ElShahed
